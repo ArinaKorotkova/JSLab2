@@ -30,55 +30,56 @@ isPalindrome (slovo);
 
 
 ///// 3
-function matrixAddition (matrix1, matrix2)
+function matrixAddition(matrix1, matrix2) 
 {
-  if (matrix1.length != matrix2.length || matrix1[0].length != matrix2[0].length) 
-  {
-    console.log("Матрицы не равны. Операция невозможна");
-    return;
-  }
-
-  let result = [];
-
-  for (let i = 0; i < matrix1.length; i++) 
-  {
-    result[i] = [];
-    
-    for (let j = 0; j < matrix1.length; j++) {
-        result[i][j] = matrix1[i][j] + matrix2[i][j];
+    if (matrix1.length != matrix2.length || matrix1[0].length != matrix2[0].length)
+    {
+        console.log("Матрицы не равны. Операция невозможна");
+        return; 
     }
-  }
 
-  return result;
+    let result = [];
+
+    for (let i = 0; i < matrix1.length; i++) 
+    {
+        result[i] = [];
+
+        for (let j = 0; j < matrix1.length; j++) 
+        {
+            result[i][j] = matrix1[i][j] + matrix2[i][j];
+        }
+    }
+
+    return result;
 }
 
 const mat1 = matrixAddition
-(
-  [
-    [1, 2],
-    [3, 4],
-  ],
-  [
-    [9, 8],
-    [7, 6],
-  ]
-);
+    (
+        [
+            [1, 2],
+            [3, 4],
+        ],
+        [
+            [9, 8],
+            [7, 6],
+        ]
+    );
 
 const mat2 = matrixAddition
-(
-  [
-    [1, 2],
-    [3, 4],
-  ],
-  [
-    [9, 8],
-    [7, 6],
-  ]
-);
+    (
+        [
+            [1, 2],
+            [3, 4],
+        ],
+        [
+            [9, 8],
+            [7, 6],
+        ]
+    );
 
-  console.log(mat1);
-  console.log(mat2);
-  console.log(matrixAddition(mat1, mat2));
+console.log(mat1);
+console.log(mat2);
+console.log(matrixAddition(mat1, mat2));
 
 
 ///// 4
